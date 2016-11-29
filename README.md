@@ -1,9 +1,13 @@
-# Using Docker Compose (recommended way)
+# Testrail instance with Docker
+
+## Using Docker Compose (recommended way)
+
+Previusly, you need buy a license or [get a trial](https://secure.gurock.com/customers/testrail/trial/)
 
 ```bash
 docker-compose up
 ```
-1. URL: http://localhost:1234/testrail
+1. URL: [http://localhost:1234/testrail](http://localhost:1234/testrail)
 2. You have to fill in the initial configuration form:
   - Driver: mysql
   - Database: testrail
@@ -13,15 +17,15 @@ docker-compose up
   - Attachments folder: /opt/testrail/attachments
   - Reports folder: /opt/testrail/reports
 
-# Manual Docker
+## Using Docker
 
-## Create mysql container
+### Create mysql container
 ```bash
 docker build -t jmlopezdona/testrail-mysql:latest ./mysql
-  docker run --name testrail-mysql -v /var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypassword -d jmlopezdona/testrail-mysql:latest
+docker run --name testrail-mysql -v /var/lib/mysql -e MYSQL_ROOT_PASSWORD=mypassword -d jmlopezdona/testrail-mysql:latest
 ```
 
-## Create apache2 + php container
+### Create apache2 + php container
 
 ```bash
 docker build -t jmlopezdona/testrail:latest ./apache2
