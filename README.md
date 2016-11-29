@@ -4,7 +4,7 @@
 docker-compose up
 ```
 1. URL: http://localhost:1234/testrail
-2. You have to fill in configurationi form:
+2. You have to fill in the initial configuration form:
   - Driver: mysql
   - Database: testrail
   - User database: testrail
