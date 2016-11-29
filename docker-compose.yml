@@ -8,7 +8,7 @@ mysql:
   ports:
     - "3306:3306"
   volumes:
-    - /var/lib/mysql
+    - testrail-mysql:/var/lib/mysql
 
 testrail:
   build: ./apache2
@@ -18,4 +18,4 @@ testrail:
   links:
     - mysql
   volumes:
-    - /var/www/http
+    - testrail:/var/www/http
