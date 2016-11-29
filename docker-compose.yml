@@ -1,0 +1,21 @@
+mysql:
+  build: ./mysql
+  dockerfile: Dockerfile
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  expose:
+    - "3306"
+  ports:
+    - "3306:3306"
+  volumes:
+    - /var/lib/mysql
+
+testrail:
+  build: ./apache2
+  dockerfile: Dockerfile
+  ports:
+    - "1234:80"
+  links:
+    - mysql
+  volumes:
+    - /var/www/http
