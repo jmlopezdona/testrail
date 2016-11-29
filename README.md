@@ -45,7 +45,7 @@ docker run --name testrail -p 1234:80 --link testrail-mysql:mysql -d -v testrail
 
 ## Reset instalation
 
-The configuration and data are keep in mysql database and config.php file in (/var/www/http/testrail) the apache server, although docker instances are been stopped or removed. If you need reinstall or reset de instalation, you need remove mysql and apache docker volumes (note: before you need stop and or remove docker instances)
+The configuration and data are keep in mysql database and config.php file in (/var/www/http/testrail) the apache server, although docker instances are been stopped or removed. If you need reinstall or reset the instalation, you need remove mysql and apache docker volumes (note: before you need stop and/or remove docker instances)
 
 ```
 docker volume rm testrail testrail-mysql
