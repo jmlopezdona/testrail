@@ -1,8 +1,8 @@
-# Testrail instance with Docker
-
-## Using Docker Compose (recommended way)
+# Testrail instance using Docker
 
 Previusly, you need buy a license or [get a trial](https://secure.gurock.com/customers/testrail/trial/)
+
+## Using Docker Compose (recommended way)
 
 ```bash
 docker-compose up
